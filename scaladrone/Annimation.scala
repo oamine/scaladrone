@@ -17,6 +17,5 @@ class Annimation {
     drone.moveRightByTime(10)
   } 
   }
-  
 
 }
