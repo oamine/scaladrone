@@ -1,9 +1,16 @@
 package command
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Command for satellite drone
+ */
+
 
 import scaladrone.Drone
 import scala.actors.Actor
 
-case class moveDiagonalForwardDownByDistance(l : Float, f : Float) extends Command {
+case class MoveDiagonalForwardDownByDistance(l : Float, f : Float) extends Command {
 	def execute(d : Drone){
 		d.moveDiagonalForwardDownByDistance(l, f) 
 	}

@@ -1,9 +1,16 @@
 package command
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Command for satellite drone
+ */
+
 
 import scaladrone.Drone
 import scala.actors.Actor
 
-case class land extends Command {
+case class Land extends Command {
 	def execute(d : Drone){
 		d.land 
 	}

@@ -1,9 +1,17 @@
 package command
 
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Command for satellite drone
+ */
+
+
 import scaladrone.Drone
 import scala.actors.Actor
 
-case class semiCerclRightForward(l : Float) extends Command {
+case class SemiCerclRightForward(l : Float) extends Command {
 	def execute(d : Drone){
 		d.semiCerclRightForward(l) 
 	}

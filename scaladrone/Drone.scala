@@ -34,8 +34,6 @@ import java.io.PrintWriter
  * @author Sarah Aichaoui
  * @Version 0.1
  * @constructor create a new drone and navdata
- *
- *
  */
 
 class Drone() extends NavDataListener with DroneStatusChangeListener {

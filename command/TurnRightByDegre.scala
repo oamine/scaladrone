@@ -1,9 +1,17 @@
 package command
 
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Command for satellite drone
+ */
+
+
 import scaladrone.Drone
 import scala.actors.Actor
 
-case class turnRightByDegre(n : Int) extends Command {
+case class TurnRightByDegre(n : Int) extends Command {
 	def execute(d : Drone){
 		d.turnRightByDegre(n) 
 	}

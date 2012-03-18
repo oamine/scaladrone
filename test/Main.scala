@@ -87,9 +87,14 @@ object Main {
 		for (i<- 0 to drone.getClass().getMethods().length-1) {
 		  
 		   var toto = ("package command\n\n"
+				   +"/**" +
+				     "* Command for scaladrone" +
+				   	 "* @author Amine O." +
+				   	 "* @author Sarah A." +
+				   	 "*/"
 				   +"import scaladrone.Drone\n"
 				   +"import scala.actors.Actor\n\n"
-			       +"case class "+drone.getClass().getMethods()(i).getName()
+			       +"case class "+drone.getClass().getMethods()(i).getName().first.toUpperCase
 			       +properParam(drone.getClass().getMethods()(i))
 			       + " extends Command "
 			       +"{\n"

@@ -1,9 +1,17 @@
 package command
 
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Command for satellite drone
+ */
+
+
 import scaladrone.Drone
 import scala.actors.Actor
 
-case class notifyAll extends Command {
+case class NotifyAll extends Command {
 	def execute(d : Drone){
 		d.notifyAll 
 	}
