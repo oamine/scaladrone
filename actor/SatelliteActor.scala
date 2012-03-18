@@ -20,9 +20,7 @@ import command._
 
 
 class SatelliteActor(port : Int,name : String) extends Drone with Actor  {
-  /**
-   *  Variable for the Serveur Actor
-   * */
+
   def getPort = port
   def getName = name
   
@@ -30,23 +28,7 @@ class SatelliteActor(port : Int,name : String) extends Drone with Actor  {
   RemoteActor.alive(port)
   RemoteActor.register('myName, this)
   
-  
-  def affiche(j : Int){    
-    for (i <- 1 to j)
-    	println(i)
-  }
-  /**
-   * convert message from server Actor
-   * * @return Array Of String 
-   * */
-  def convert(s: String) : Array[String] = {
-		  return s split("\\|")    
-  }
-  
-  def toto : String = {
-    return "salut"
-  }
-  
+    
 
   def act(){
     loop{
@@ -131,7 +113,6 @@ class SatelliteActor(port : Int,name : String) extends Drone with Actor  {
         case x : SpeedByTime=> x.execute(this)
         case x : SpeedListInDoor=> x.execute(this)
         case x : SpeedListOutDoor=> x.execute(this)
-        case x : SpeedVerticalIndoor_$eq=> x.execute(this)
         case x : SpeedVerticalIndoor=> x.execute(this)        
         case x : SpeedVerticalOutdoor_$eq=> x.execute(this)
         case x : SpeedVerticalOutdoor=> x.execute(this)

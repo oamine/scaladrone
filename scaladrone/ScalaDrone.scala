@@ -1,4 +1,12 @@
 package scaladrone
+
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Just a set of simple command.
+ */
+
 import com.codeminders.ardrone.ARDrone
 import com.codeminders.ardrone.ARDrone.LED
 import com.codeminders.ardrone.ARDrone.Animation
@@ -168,7 +176,7 @@ class ScalaDrone() extends ARDrone {
     this.waitForReady(3000)
   }
 
-  // les commande ajouté
+
   def up() {
     this.moves(0, 0, 0.9921875f, 0);
   }
@@ -201,7 +209,6 @@ class ScalaDrone() extends ARDrone {
     this.moves(0.9921875f, 0, 0, 0);
   }
 
-  //tourne sur lui meme  gauche
   def turnLeft() {
     this.moves(0, -0.9921875f, 0, -0.9921875f)
   }
