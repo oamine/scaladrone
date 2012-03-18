@@ -9,10 +9,6 @@ import scaladrone.Drone
 import command._
 
 
-case object Up
-case object Front
-
-
 class SatelliteActor(port : Int,name : String) extends Drone with Actor  {
   /**
    *  Variable for the Serveur Actor
@@ -50,7 +46,7 @@ class SatelliteActor(port : Int,name : String) extends Drone with Actor  {
         case x : String => println(name + " => "+x)
         case x : up  => x.execute(this)
         case x : Down => x.execute(this)     
-      //  case x : TurnLeft => println(x)
+        case x : TurnLeft => println(x)
         case _ => println(name+" -> rien")
       }
       
