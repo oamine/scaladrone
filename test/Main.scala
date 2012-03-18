@@ -1,5 +1,13 @@
 package test
-
+/**
+ * This Main file generate a
+ * all command class file from scaladrone file
+ * Don't use it
+ * It's just a tool...
+ * 
+ * Amine
+ * 
+ * */
 
 import scala.actors.Actor
 import scala.actors.Actor._
