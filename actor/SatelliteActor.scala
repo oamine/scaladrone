@@ -1,4 +1,14 @@
 package actor
+
+/**
+ * @author Amine O.
+ * @author Sarah A.
+ * 
+ * Satellite actor.
+ * This class represent a slave drone.
+ * the command come from the master drone
+ */
+
 import scala.actors._
 import scala.actors.Actor
 import scala.actors.Actor._
